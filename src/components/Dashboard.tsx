@@ -1,6 +1,7 @@
 import { useLoanData } from "../hooks/useLoanData";
 import LoanGradeTable from "./LoanGradeTable";
 import LoanFilters from "./LoanFilters";
+import LoanGradeBarChart from "./LoanGradeBarChart";
 
 function Dashboard() {
   const {
@@ -20,14 +21,25 @@ function Dashboard() {
   }
 
   return (
-    <div className="px-6 pb-6 max-w-6xl mx-auto">
-      <LoanGradeTable aggregatedData={aggregatedData} />
-      <LoanFilters
-        filters={currentFilters}
-        onChange={applyFilters}
-        options={filterOptions}
-        resetFilters={resetFilters}
-      />
+    <div className="min-h-screen bg-gray-50 py-10 px-4">
+      <div className="flex flex-col gap-8 max-w-6xl mx-auto">
+        <header className="mb-8">
+          <h1 className="text-3xl font-bold text-gray-800 tracking-tight text-center">
+            Loan Analytics Dashboard
+          </h1>
+          <p className="text-gray-600 mt-2 text-sm text-center">
+            View and filter loan balances aggregated by grade
+          </p>
+        </header>
+        <LoanGradeTable aggregatedData={aggregatedData} />
+        <LoanFilters
+          filters={currentFilters}
+          onChange={applyFilters}
+          options={filterOptions}
+          resetFilters={resetFilters}
+        />
+        <LoanGradeBarChart aggregatedData={aggregatedData} />
+      </div>
     </div>
   );
 }

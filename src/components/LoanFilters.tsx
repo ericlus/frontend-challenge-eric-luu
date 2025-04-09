@@ -46,7 +46,7 @@ function LoanFilters({
       <div className="flex-shrink-0">
         <button
           onClick={resetFilters}
-          className="px-4 py-2 cursor-pointer text-sm text-gray-900 border border-gray-300 rounded-md hover:bg-gray-50"
+          className="px-4 py-2 cursor-pointer text-sm text-gray-900 border border-gray-300 rounded-md bg-white hover:bg-gray-100"
         >
           Reset Filters
         </button>
@@ -70,7 +70,7 @@ const Select = ({ label, value, options, onChange }: SelectProps) => (
     <select
       value={value}
       onChange={(e) => onChange(e.target.value)}
-      className="w-full rounded-md border border-gray-300 focus:border-blue-500 focus:ring-blue-500 text-sm px-3 py-2 bg-white text-gray-800"
+      className="w-full cursor-pointer rounded-md border border-gray-300 focus:border-blue-500 focus:ring-blue-500 text-sm px-3 py-2 bg-white text-gray-800"
     >
       <option value="">All</option>
       {options.map((option) => (
