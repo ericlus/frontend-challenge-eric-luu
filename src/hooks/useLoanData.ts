@@ -97,6 +97,8 @@ export const useLoanData = () => {
   };
 
   return {
+    data,
+    filteredData,
     aggregatedData,
     loading,
     error,
