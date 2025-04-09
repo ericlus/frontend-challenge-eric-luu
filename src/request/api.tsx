@@ -22,13 +22,14 @@ const parseData = (
     term,
     V1,
   } of result.data) {
+    // Trim to normalize data
     rawData.push({
-      year: v_year,
-      quarter: v_quarter,
-      grade: grade_2,
-      homeOwnership: home_ownership,
-      term,
-      currentBalance: V1,
+      year: v_year.trim(),
+      quarter: v_quarter.trim(),
+      grade: grade_2.trim(),
+      homeOwnership: home_ownership.trim(),
+      term: term.trim(),
+      currentBalance: V1.trim(),
     });
   }
 

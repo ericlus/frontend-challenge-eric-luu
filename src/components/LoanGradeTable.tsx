@@ -1,8 +1,7 @@
+import { AggregatedResult } from "../utils/aggregateLoans";
+
 type LoanGradeTableProps = {
-  aggregatedData: {
-    grade: string;
-    totalBalance: string;
-  }[];
+  aggregatedData: AggregatedResult[];
 };
 
 function LoanGradeTable({ aggregatedData }: LoanGradeTableProps) {
